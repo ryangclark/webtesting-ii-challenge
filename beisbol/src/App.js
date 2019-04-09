@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -54,7 +53,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Beisbol App</h1>
         </header>
-        <table className="at-bat">
+        <tbody className="at-bat">
           <tr>
             <th>Balls</th>
             <th>Strikes</th>
@@ -63,7 +62,13 @@ class App extends Component {
             <td>{this.state.ballCount}</td>
             <td>{this.state.strikeCount}</td>
           </tr>
-        </table>
+        </tbody>
+        <div className="dashboard">
+          <button onClick={this.handleBall}>Ball</button>
+          <button onClick={this.handleStrike}>Strike</button>
+          <button onClick={this.handleFoul}>Foul</button>
+          <button onClick={this.handleHit}>Hit</button>
+        </div>
       </div>
     );
   }
